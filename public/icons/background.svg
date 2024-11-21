@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1366 768">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Gradiente_sem_nome_148);
+      }
+    </style>
+    <radialGradient id="Gradiente_sem_nome_148" data-name="Gradiente sem nome 148" cx="683" cy="384" fx="683" fy="384" r="327.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#534ca3"/>
+      <stop offset=".23" stop-color="#433e7c"/>
+      <stop offset=".59" stop-color="#2e2c48"/>
+      <stop offset=".85" stop-color="#212127"/>
+      <stop offset="1" stop-color="#1d1d1b"/>
+    </radialGradient>
+  </defs>
+  <rect class="st0" x=".5" y=".5" width="1365" height="767"/>
+  <path d="M1365,1v766H1V1h1364M1366,0H0v768h1366V0h0Z"/>
+</svg>
