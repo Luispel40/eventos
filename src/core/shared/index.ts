@@ -1,2 +1,3 @@
+import Alias from "./Alias";
 import Id from "./id";
-export { Id };
+export { Alias, Id };
