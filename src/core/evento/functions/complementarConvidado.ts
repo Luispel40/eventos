@@ -1,22 +1,26 @@
-import { Id, Senha } from "@/core/shared";
-import Evento from "../model/Evento";
-import validarEvento from "./validarEvento";
+import Convidado from "../model/Convidado";
+import validarConvidado from "./validarConvidado";
 
 export default function complementarConvidado(
-  eventoParcial: Partial<Evento>
-): Evento {
-  const erros = validarEvento(eventoParcial);
+  convidado: Partial<Convidado>
+): Convidado {
+  const erros = validarConvidado(convidado);
 
-  if (erros.length) {
+  if (erros.length > 0) {
     throw new Error(erros.join("\n"));
   }
 
-  const evento: Evento = {
-    ...eventoParcial,
-    id: eventoParcial.id ?? Id.novo(),
-    senha: eventoParcial.senha ?? Senha.nova(20),
-    publicoEsperado: +(eventoParcial.publicoEsperado ?? 1),
-  } as Evento;
+  const qtdeAcompanhantes = convidado.qtdeAcompanhantes ?? 0;
+  const temAcompanhantes =
+    convidado.possuiAcompanhantes &&
+    convidado.confirmado &&
+    qtdeAcompanhantes > 0;
 
-  return evento;
+  const convidadoAtualizado = {
+    ...convidado,
+    qtdeAcompanhantes: temAcompanhantes ? qtdeAcompanhantes : 0,
+    possuiAcompanhantes: temAcompanhantes,
+  };
+
+  return convidadoAtualizado as Convidado;
 }

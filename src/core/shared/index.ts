@@ -1,5 +1,5 @@
 import Alias from "./Alias";
-import Id from "./id";
+import Id from "./Id";
 import Senha from "./Senha";
 import Data from "./Data";
 

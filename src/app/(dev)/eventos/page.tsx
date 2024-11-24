@@ -10,9 +10,9 @@ export default function PaginaEventos() {
         <div
           key={evento.id}
           className="
-          flex flex-col w-96 overflow-hidden
-        bg-zinc-800 rounded-lg
-        "
+            flex flex-col w-full overflow-hidden
+            bg-zinc-800 rounded-lg
+          "
         >
           <div className="relative w-full h-52">
             <Image
@@ -22,23 +22,23 @@ export default function PaginaEventos() {
               className="object-cover"
             />
           </div>
-          <div className="flex flex-col flex-1 items-center p-7 gap-5 text-center">
+          <div className="flex-1 flex flex-col items-center p-7 gap-5 text-center">
             <span className="text-lg font-black">{evento.nome}</span>
-            <p className="flex-1 text-sm text-zinc-400 text-center">{evento.descricao}</p>
-            {/* <QRCode
+            <p className="flex-1 text-sm text-zinc-400">{evento.descricao}</p>
+            <QRCode
               value={JSON.stringify({ id: evento.id, senha: evento.senha })}
               className="w-44 h-44"
-            /> */}
+            />
             <div className="flex gap-5">
               <Link
                 href={`/evento/admin/${evento.id}/${evento.senha}`}
-                className="botao vermelho flex-1"
+                className="flex-1 botao vermelho"
               >
                 Admin
               </Link>
               <Link
                 href={`/convite/${evento.alias}`}
-                className="botao verde flex-1"
+                className="flex-1 botao verde"
               >
                 Convite
               </Link>

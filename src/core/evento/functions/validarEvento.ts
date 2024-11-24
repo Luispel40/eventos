@@ -20,11 +20,11 @@ export default function validarEvento(evento: Partial<Evento>): string[] {
   }
 
   if (!evento.local) {
-    erros.push("Loval é obrigatória");
+    erros.push("Local é obrigatório");
   }
 
   if (!evento.publicoEsperado || evento.publicoEsperado < 1) {
-    erros.push("Publico esperado é obrigatória");
+    erros.push("Público esperado é obrigatório");
   }
 
   if (!evento.imagem) {
@@ -32,7 +32,7 @@ export default function validarEvento(evento: Partial<Evento>): string[] {
   }
 
   if (!evento.imagemBackground) {
-    erros.push("Imagem background é obrigatória");
+    erros.push("Imagem de fundo é obrigatória");
   }
 
   return erros;

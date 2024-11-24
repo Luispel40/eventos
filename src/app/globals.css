@@ -15,8 +15,8 @@
 }
 
 body {
-  color: #ededed;
-  background: #0a0a0a;
+  color: var(--foreground);
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -32,20 +32,25 @@ body {
   }
 
   .botao.azul {
-    @apply bg-blue-500;
+    @apply bg-blue-500 text-white;
   }
+
   .botao.azul:hover {
     @apply bg-blue-600;
   }
+
   .botao.vermelho {
-    @apply bg-red-500;
+    @apply bg-red-500 text-white;
   }
+
   .botao.vermelho:hover {
     @apply bg-red-600;
   }
+
   .botao.verde {
-    @apply bg-green-500;
+    @apply bg-green-500 text-white;
   }
+
   .botao.verde:hover {
     @apply bg-green-600;
   }

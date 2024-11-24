@@ -8,8 +8,8 @@ import criarEventoVazio from "./functions/criarEventoVazio";
 
 export type { Evento, Convidado };
 export {
-    complementarConvidado,
-    complementarEvento,
-    criarConvidadoVazio,
-    criarEventoVazio,
-}
+  complementarConvidado,
+  complementarEvento,
+  criarConvidadoVazio,
+  criarEventoVazio,
+};
